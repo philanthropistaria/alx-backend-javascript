@@ -71,7 +71,7 @@ app.get('/students', (_, res) => {
   const responseParts = ['This is the list of our students'];
 
   countStudents(DB_FILE)
- .then((report) => {
+    .then((report) => {
       responseParts.push(report);
       const responseText = responseParts.join('\n');
       res.setHeader('Content-Type', 'text/plain');
